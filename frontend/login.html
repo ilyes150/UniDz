@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UniDZ · Secure Access Terminal</title>
+    <link rel="stylesheet" href="Style.css" />
+</head>
+<body>
+    <canvas id="bg-canvas"></canvas>
+    <div class="login-shell">
+        <div class="login-card">
+            <div class="login-accent-bar"></div>
+            <div class="login-card-body">
+                <div class="login-header">
+                    <div class="login-logo-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                            <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                        </svg>
+                    </div>
+                    <div>
+                        <div class="login-title">Uni<span>DZ</span></div>
+                        <div class="login-subtitle">Secure Access Terminal</div>
+                    </div>
+                </div>
+                <hr class="login-divider" />
+                <div id="login-error" class="login-error-msg">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <circle cx="12" cy="12" r="10"/>
+                        <line x1="12" y1="8" x2="12" y2="12"/>
+                        <line x1="12" y1="16" x2="12.01" y2="16"/>
+                    </svg>
+                    <span id="error-text"></span>
+                </div>
+                <form id="login-form" class="login-form">
+                    <div class="input-group">
+                        <label for="auth-username">Matricule / Student Code</label>
+                        <div class="input-wrapper">
+                            <div class="input-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="12" cy="7" r="4"/>
+                                </svg>
+                            </div>
+                            <input
+                                type="text"
+                                id="auth-username"
+                                required
+                                autocomplete="username"
+                                placeholder="e.g., 232335488809"
+                            />
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label for="auth-password">Security Access Key</label>
+                        <div class="input-wrapper">
+                            <div class="input-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+                                    <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+                                </svg>
+                            </div>
+                            <input
+                                type="password"
+                                id="auth-password"
+                                required
+                                autocomplete="current-password"
+                                placeholder="••••••••••••"
+                            />
+                        </div>
+                    </div>
+                    <button type="submit" id="submit-btn" class="login-submit-btn">
+                        <span class="spinner" id="btn-spinner"></span>
+                        <span id="btn-label">Establish Connection</span>
+                    </button>
+
+                </form>
+
+            </div>
+        </div>
+    </div>
+    <script src="JS/login.js"></script>
+</body>
+</html>

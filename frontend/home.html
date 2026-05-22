@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UniDZ · Student Portal Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Syne:wght@400;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="Style.css" />
+</head>
+<body>
+    <canvas id="bg-canvas"></canvas>
+    <div id="app">
+        <aside id="sidebar">
+            <div class="sidebar-brand">
+                <div class="brand-text">
+                    <h1>Uni<span>DZ</span></h1>
+                    <small>Student Portal</small>
+                </div>
+            </div>
+            <nav class="sidebar-menu">
+                <div class="nav-item active" id="nav-home" onclick="navigate('home', this)">
+                    Dashboard Overview
+                </div>
+                <div class="nav-item" id="nav-records" onclick="navigate('records', this)">
+                    Academic Logs
+                </div>
+            </nav>
+            <div class="sidebar-footer" onclick="handlePortalLogout()">
+                Terminate Session
+            </div>
+        </aside>
+        <div id="main">
+            <header id="header">
+                <div class="header-breadcrumb">
+                    UniDZ / <span id="breadcrumb-label">Dashboard Overview</span>
+                </div>
+            </header>
+            <div id="content">
+                <div class="page active" id="page-home">
+                    <div class="home-welcome-message" id="welcome-text">Loading session...</div>
+                    <div class="profile-details" id="profile-details"></div>
+                </div>
+                <div class="page" id="page-records">
+                    <div class="section-title">Academic Logs</div>
+                    <div class="sem-tabs">
+                        <div class="sem-tab active" data-sem="1" onclick="selectSem(1, this)">Semester 01</div>
+                        <div class="sem-tab"        data-sem="2" onclick="selectSem(2, this)">Semester 02</div>
+                        <div class="sem-tab"        data-sem="3" onclick="selectSem(3, this)">Semester 03</div>
+                        <div class="sem-tab locked" title="Term Data Unreleased">Semester 04</div>
+                    </div>
+                    <div id="sem-content"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="JS/home.js"></script>
+</body>
+</html>
