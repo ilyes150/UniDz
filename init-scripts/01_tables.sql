@@ -19,7 +19,7 @@ CREATE TABLE login (
 );
 
 CREATE TABLE semester1 (
-    ID          INT PRIMARY KEY,
+    id          INT PRIMARY KEY,
     ASD1        DECIMAL(5,2),
     IOS1        DECIMAL(5,2),
     SM          DECIMAL(5,2),
@@ -38,11 +38,11 @@ CREATE TABLE semester1 (
     Credit_Sem  INT,
     Avg_Sem     DECIMAL(5,2),
     rank        INT,
-    FOREIGN KEY (ID) REFERENCES Student(id)
+    FOREIGN KEY (id) REFERENCES Student(id)
 );
 
 CREATE TABLE semester2 (
-    ID          INT PRIMARY KEY,
+    id          INT PRIMARY KEY,
     ASD2        DECIMAL(5,2),
     ADO         DECIMAL(5,2),
     Avg_UEF1    DECIMAL(5,2),
@@ -61,11 +61,11 @@ CREATE TABLE semester2 (
     Credit_Sem  INT,
     Avg_Sem     DECIMAL(5,2),
     rank        INT,
-    FOREIGN KEY (ID) REFERENCES Student(id)
+    FOREIGN KEY (id) REFERENCES Student(id)
 );
 
 CREATE TABLE semester3 (
-    ID          INT PRIMARY KEY,
+    id          INT PRIMARY KEY,
     ASD3        DECIMAL(5,2),
     ISI         DECIMAL(5,2),
     OOP1        DECIMAL(5,2),
@@ -84,11 +84,11 @@ CREATE TABLE semester3 (
     Credit_Sem  INT,
     Avg_Sem     DECIMAL(5,2),
     rank        INT,
-    FOREIGN KEY (ID) REFERENCES Student(id)
+    FOREIGN KEY (id) REFERENCES Student(id)
 );
 
 CREATE TABLE semester4 (
-    ID          INT PRIMARY KEY,
+    id          INT PRIMARY KEY,
     OOP2        DECIMAL(5,2),
     IOS2        DECIMAL(5,2),
     Avg_UEF1    DECIMAL(5,2),
@@ -107,7 +107,7 @@ CREATE TABLE semester4 (
     Credit_Sem  INT,
     Avg_Sem     DECIMAL(5,2),
     rank        INT,
-    FOREIGN KEY (ID) REFERENCES Student(id)
+    FOREIGN KEY (id) REFERENCES Student(id)
 );
 
 CREATE TABLE result (
