@@ -1,4 +1,4 @@
-const API_BASE = "";
+const API_BASE = "https://unidz.onrender.com";
 
 if (localStorage.getItem("unidz_student")) {
     window.location.replace("home.html");

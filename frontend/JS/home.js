@@ -1,4 +1,4 @@
-const API_BASE = "";
+const API_BASE = "https://unidz.onrender.com";
 
 // Auth guard
 const currentStudent  = JSON.parse(localStorage.getItem("unidz_student"));
